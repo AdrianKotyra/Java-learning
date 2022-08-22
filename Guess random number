@@ -1,0 +1,25 @@
+import java.util.Random;
+import java.util.Scanner;
+class Javastart {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+       Random random = new Random();
+       int numberToGuess = random.nextInt(100) +1;
+
+       boolean wasNumberGuesses = false;
+       while (!wasNumberGuesses) {
+        System.out.println("Podaj liczbe");
+        int liczba = input.nextInt();
+        if (liczba < numberToGuess) {
+            System.out.println("liczba jest za mala");
+        }
+
+        else if (liczba > numberToGuess) {
+            System.out.println("liczba jest za duza");
+        }
+        else {System.out.println("To jest wlasciwa liczba");}
+        wasNumberGuesses = true;
+       }
+        
+    }
+}
